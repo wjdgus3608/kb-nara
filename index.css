@@ -1,5 +1,5 @@
 body {
-  background: #fff4e2;
+
 }
 
 
@@ -40,4 +40,8 @@ body {
 .ic-img {
   width: 200px;
   height: 200px;
+}
+
+a {
+  font-size: 25px;
 }
