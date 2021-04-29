@@ -1,0 +1,43 @@
+body {
+  background: #fff4e2;
+}
+
+
+.contents-container {
+  text-align: center;
+}
+
+.android-contents {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.ios-contents {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.android-app {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.ios-app {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+    margin-left: 20px;
+  margin-right: 20px;
+}
+
+.ic-img {
+  width: 100px;
+  height: 100px;
+}
