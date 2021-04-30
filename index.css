@@ -24,8 +24,8 @@ body {
 
 
 .ic-img {
-  width: 350px;
-  height: 300px;
+  width: 310px;
+  height: 260px;
 }
 
 .no-class {
@@ -33,6 +33,6 @@ body {
 }
 
 a {
-  font-size: 25px;
+  font-size: 30px;
   flex-wrap: nowrap;
 }
