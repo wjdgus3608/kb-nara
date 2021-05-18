@@ -12,6 +12,7 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .android-app {
@@ -24,8 +25,8 @@ body {
 
 
 .ic-img {
-  width: 310px;
-  height: 260px;
+  width: 19.375em;
+  height: 16.25em;
 }
 
 .no-class {
