@@ -31,11 +31,11 @@ body {
 }
 
 .no-class {
-  font-size: 1em;
+  font-size: 0.95em;
 }
 
 a {
-  font-size: 1em;
+  font-size: 0.95em;
   flex-wrap: nowrap;
 }
 
