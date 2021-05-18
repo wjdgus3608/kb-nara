@@ -36,3 +36,8 @@ a {
   font-size: 30px;
   flex-wrap: nowrap;
 }
+
+.text-img {
+  width: 100%;
+  height: auto;
+}
