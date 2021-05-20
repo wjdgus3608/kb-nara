@@ -69,17 +69,11 @@
   <div class="mynavbar">
     <div class="progress-container">
       <div class="row" style="align-items: center;justify-content: center;">
-        <div class="progress-label">
-          포인트리 적립현황
-        </div>
-        <!-- <div class="progress text-center" style="width:30%;">
-        <div id="progress-bar" role="progressbar" class="progress-bar progress-bar-striped progress-bar-animated" style="width:0%; color:red;" aria-valuemin="0" aria-valuemax="100">0 포인트리</div>
-      </div> -->
       <div class="progress" style="width:30%; position:relative;">
       <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
         <div id="progress-text" style="position:absolute; left:38%; top:50%;">0 포인트리</div>
       </div>
-      <div id="max-pointree" style="font-size:1em; margin-left:1em;">
+      <div id="max-pointree" class="max-pointree-label">
 
       </div>
     </div>
@@ -98,7 +92,7 @@ function stackPonitree(obj) {
     sec = 1;
     upProgressbar(3000);
   }
-  else if (third===undefined) {
+  else if (obj.className==='third-app' && third===undefined) {
     third = 1;
     upProgressbar(3000);
   }
@@ -115,7 +109,7 @@ function upProgressbar(value) {
 }
 
 function updatePointreeLabel(nowValue) {
-  document.querySelector('#max-pointree').innerHTML = '( '+pointree+'/'+maxPointree +' ) 포인트리';
+  document.querySelector('#max-pointree').innerHTML = '( '+pointree+'/'+maxPointree +' )';
 }
 </script>
 </html>
