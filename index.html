@@ -3,119 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <title>KB 나라사랑 안내페이지</title>
+  <title>KB 나라사랑 마케팅 동의 페이지</title>
 </head>
 <body>
-  <div class="contents-container">
-    <img src="img/title_img.png" class="text-img"/>
-    <br><br>
-    <img src="img/top.png" class="text-img">
-    <br><br><br><br>
-    <div class="android-contents">
-      <div class="android-app">
-        <img src="img/kbstarbank.png" class="ic-img"/>
-        <div class="no-class">
-          설치
-          <br>
-          (
-          <a class="first-app" target="_blank" href="https://play.google.com/store/apps/details?id=com.kbstar.kbbank" onclick="stackPonitree(this)">android</a>
-          /
-          <a class="first-app" target="_blank" href="https://apps.apple.com/us/app/kb%EC%8A%A4%ED%83%80%EB%B1%85%ED%82%B9/id373742138" onclick="stackPonitree(this)">ios</a>
-          )
-        </div>
-        <br><br>
-        <img src="img/kbstarbank_des.png" class="ic-img">
-      </div>
-      <div class="android-app">
-        <img src="img/liivmate.png" class="ic-img" style="padding-top:0.5em;"/>
-        <div class="no-class">
-          설치
-          <br>
-          (
-          <a class="second-app" target="_blank" href="https://play.google.com/store/apps/details?id=com.kbcard.kat.liivmate" onclick="stackPonitree(this)">android</a>
-          /
-          <a class="second-app" target="_blank" href="https://apps.apple.com/us/app/liiv-mate/id1170306387" onclick="stackPonitree(this)">ios</a>
-          )
-        </div>
-        <br><br>
-        <img src="img/liivmate_des.png" class="ic-img">
-      </div>
-      <div class="android-app">
-        <img src="img/kbpay.png" class="ic-img"/>
-        <div class="no-class">
-          설치
-          <br>
-          (
-          <a class="third-app" target="_blank" href="https://play.google.com/store/apps/details?id=com.kbcard.cxh.appcard" onclick="stackPonitree(this)">android</a>
-          /
-          <a class="third-app" target="_blank" href="https://apps.apple.com/kr/app/kb-pay/id695436326" onclick="stackPonitree(this)">ios</a>
-          )
-        </div>
-        <br><br>
-        <img src="img/kbpay_des.png" class="ic-img">
-      </div>
-    </div>
-    <img src="img/5.png" class="text-img"/>
-    <img src="img/2.png" class="text-img"/>
-    <img src="img/3.png" class="text-img">
-      <a class="btn btn-primary" href="https://www.liivm.com/info/rateplan/rateplan/infoLte">요금제 자세히보기</a>
-    </img>
-
-    <img src="img/6.png" class="text-img"/>
-  </div>
-  <div class="mynavbar">
-    <div class="progress-container">
-      <div class="row" style="align-items: center;justify-content: center;">
-      <div class="progress" style="width:30%; position:relative;">
-      <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-        <div id="progress-text" style="position:absolute; left:38%; top:50%;">0 포인트리</div>
-      </div>
-      <div id="max-pointree" class="max-pointree-label">
-
-      </div>
-      <a class="btn btn-primary" href="#" style="font-size:0.7em;">포인트리 더받기</a>
+  <div class="pop-main-container">
+    <div class="text-container">
+      <h4>마케팅 페이지 동의여부 확인</h4>
+      <br>
+      <p>당행 및 KB금융그룹 계열사가 제공하는 마케팅 페이지로 이동합니다.<br> 동의하십니까?</p>
+      <a class="btn btn-primary" href="index.html" style="font-size:0.7em;">동의</a>
+      <a class="btn btn-primary" href="https://www.kbstar.com/" style="font-size:0.7em;">거절</a>
     </div>
   </div>
-
-</div>
 </body>
-<script type="text/javascript">
-
-  var first, sec, third, pointree = 0, maxPointree = 21000;
-  updatePointreeLabel(0);
-  function stackPonitree(obj) {
-    if (obj.className==='first-app' && first===undefined) {
-      first = 1;
-      upProgressbar(3000);
-    }
-    else if (obj.className==='second-app' && sec===undefined) {
-      sec = 1;
-      upProgressbar(3000);
-    }
-    else if (obj.className==='third-app' && third===undefined) {
-      third = 1;
-      upProgressbar(3000);
-    }
-  }
-
-  function upProgressbar(value) {
-    pointree += value;
-    var preValue = document.querySelector('#progress-bar').style.width;
-    preValue = parseFloat(preValue);
-    var nextValue = preValue+(value/21000*100);
-    document.querySelector('#progress-bar').style.width = nextValue+'%';
-    document.querySelector('#progress-text').innerHTML = pointree + ' 포인트리';
-    updatePointreeLabel(value);
-  }
-
-  function updatePointreeLabel(nowValue) {
-    document.querySelector('#max-pointree').innerHTML = '( '+pointree+'/'+maxPointree +' )';
-  }
-
-</script>
 </html>
