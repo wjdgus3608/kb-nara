@@ -85,35 +85,37 @@
 </div>
 </body>
 <script type="text/javascript">
-var first, sec, third, pointree = 0, maxPointree = 21000;
-updatePointreeLabel(0);
-function stackPonitree(obj) {
-  if (obj.className==='first-app' && first===undefined) {
-    first = 1;
-    upProgressbar(3000);
-  }
-  else if (obj.className==='second-app' && sec===undefined) {
-    sec = 1;
-    upProgressbar(3000);
-  }
-  else if (obj.className==='third-app' && third===undefined) {
-    third = 1;
-    upProgressbar(3000);
-  }
-}
 
-function upProgressbar(value) {
-  pointree += value;
-  var preValue = document.querySelector('#progress-bar').style.width;
-  preValue = parseFloat(preValue);
-  var nextValue = preValue+(value/21000*100);
-  document.querySelector('#progress-bar').style.width = nextValue+'%';
-  document.querySelector('#progress-text').innerHTML = pointree + ' 포인트리';
-  updatePointreeLabel(value);
-}
+  var first, sec, third, pointree = 0, maxPointree = 21000;
+  updatePointreeLabel(0);
+  function stackPonitree(obj) {
+    if (obj.className==='first-app' && first===undefined) {
+      first = 1;
+      upProgressbar(3000);
+    }
+    else if (obj.className==='second-app' && sec===undefined) {
+      sec = 1;
+      upProgressbar(3000);
+    }
+    else if (obj.className==='third-app' && third===undefined) {
+      third = 1;
+      upProgressbar(3000);
+    }
+  }
 
-function updatePointreeLabel(nowValue) {
-  document.querySelector('#max-pointree').innerHTML = '( '+pointree+'/'+maxPointree +' )';
-}
+  function upProgressbar(value) {
+    pointree += value;
+    var preValue = document.querySelector('#progress-bar').style.width;
+    preValue = parseFloat(preValue);
+    var nextValue = preValue+(value/21000*100);
+    document.querySelector('#progress-bar').style.width = nextValue+'%';
+    document.querySelector('#progress-text').innerHTML = pointree + ' 포인트리';
+    updatePointreeLabel(value);
+  }
+
+  function updatePointreeLabel(nowValue) {
+    document.querySelector('#max-pointree').innerHTML = '( '+pointree+'/'+maxPointree +' )';
+  }
+
 </script>
 </html>
