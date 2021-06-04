@@ -12,17 +12,20 @@ body {
 
 .btn-container {
   position: absolute;
-  right: 10%;
+  right: 5%;
+  bottom: 5%;
 }
 
 
 .pop-main-container{
+
   position: relative;
   width: 100%;
   height: 100%;
 }
 
 .text-container{
+  border-style: ridge;
   position: absolute;
   left: 50%;
   top: 50%;
